@@ -35,9 +35,3 @@ steps:
   inputs:
     artifactName: 'war'
     pathToPublish: '$(build.artifactStagingDirectory)'
-
-- task: AzureRmWebAppDeployment@3
-  inputs:
-    azureSubscription: '<Azure service connection>'
-    WebAppName: '<Name of web app>'
-    Package: '$(System.DefaultWorkingDirectory)/**/*.war'
